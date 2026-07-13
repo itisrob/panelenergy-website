@@ -127,6 +127,7 @@
   var qs = 1, QT = 5;
   function qShow(){
     document.querySelectorAll('.qstep').forEach(function(s){ s.classList.toggle('active', +s.dataset.step === qs); });
+    document.querySelectorAll('.qsl').forEach(function(el,i){ el.classList.toggle('on', i+1===qs); el.classList.toggle('done', i+1<qs); });
     var p = document.getElementById('prog'); if (p) p.style.width = (qs / QT * 100) + '%';
     var b = document.getElementById('qback'); if (b) b.style.visibility = qs > 1 ? 'visible' : 'hidden';
     var c = document.getElementById('qcount'); if (c) c.textContent = 'Schritt ' + qs + ' von ' + QT + ' · Ihre Daten werden vertraulich behandelt';
