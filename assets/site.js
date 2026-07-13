@@ -85,7 +85,7 @@
   var ft = document.getElementById('ftr'); if (ft) ft.innerHTML = footerHtml;
 
   // draft note
-  var dn = document.createElement('div'); dn.className = 'draft-note'; dn.textContent = 'Entwurf v4 · noch nicht live'; document.body.appendChild(dn);
+  var dn = document.createElement('div'); dn.className = 'draft-note'; dn.textContent = 'Entwurf v5 · noch nicht live'; document.body.appendChild(dn);
 
   // cookie banner
   var cookie = document.createElement('div');
