@@ -62,7 +62,7 @@
       '</div>' +
       '<div class="foot-bottom">' +
         '<span>© 2026 Panel Energy GmbH · Alle Rechte vorbehalten</span>' +
-        '<span><a href="https://panelenergy.de/impressum/">Impressum</a> · <a href="https://panelenergy.de/datenschutz/">Datenschutz</a> · <a href="https://panelenergy.de/agb/">AGB</a></span>' +
+        '<span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="agb.html">AGB</a></span>' +
       '</div>' +
     '</div></footer>';
 
@@ -75,7 +75,7 @@
   // cookie banner
   var cookie = document.createElement('div');
   cookie.className = 'cookie';
-  cookie.innerHTML = '<h4>Datenschutz &amp; Cookies</h4><p>Wir verwenden Cookies, um unsere Website zu verbessern und die Nutzung zu analysieren (Google Analytics, Microsoft Clarity). Details in der <a href="https://panelenergy.de/datenschutz/">Datenschutzerklärung</a>.</p><div class="row"><button class="btn btn-primary" data-cookie="accept">Alle akzeptieren</button><button class="btn btn-outline" data-cookie="decline">Nur notwendige</button></div>';
+  cookie.innerHTML = '<h4>Datenschutz &amp; Cookies</h4><p>Wir verwenden Cookies, um unsere Website zu verbessern und die Nutzung zu analysieren (Google Analytics, Microsoft Clarity). Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p><div class="row"><button class="btn btn-primary" data-cookie="accept">Alle akzeptieren</button><button class="btn btn-outline" data-cookie="decline">Nur notwendige</button></div>';
   document.body.appendChild(cookie);
   function setCookie(v){ try{ localStorage.setItem('pe_cookie', v); }catch(e){} cookie.classList.remove('show'); }
   cookie.querySelectorAll('[data-cookie]').forEach(function (b) { b.addEventListener('click', function () { setCookie(b.getAttribute('data-cookie')); }); });
@@ -127,8 +127,8 @@
   document.querySelectorAll('form.js-form').forEach(function (f) {
     f.addEventListener('submit', function (e) {
       e.preventDefault();
-      var quiz = f.closest('.quiz'), modalBox = f.closest('.modal-box'), card = f.closest('.form-card');
-      if (quiz) { quiz.innerHTML = successHtml(true); }
+      var quiz = f.closest('.quiz2') || f.closest('.quiz'), modalBox = f.closest('.modal-box'), card = f.closest('.form-card');
+      if (quiz) { quiz.innerHTML = successHtml(quiz.classList.contains('quiz2') ? false : true); }
       else if (modalBox) { modalBox.innerHTML = '<button class="modal-x" aria-label="Schließen" onclick="document.getElementById(\'modal\').classList.remove(\'show\')">&times;</button>' + successHtml(false); }
       else if (card) { card.innerHTML = successHtml(false); }
       else { f.innerHTML = successHtml(false); }
