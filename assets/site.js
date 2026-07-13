@@ -28,7 +28,7 @@
         '<a class="mail" href="mailto:' + MAIL + '">' + mailSvg + MAIL + '</a>' +
         '<a href="tel:' + TEL + '">' + phoneSvg + TELD + '</a>' +
         '<span class="addr" style="display:inline-flex;align-items:center;gap:7px">' + pinSvg + ADDR + '</span>' +
-        '<span class="hrs" style="color:rgba(255,255,255,.55)">Mo–Sa 9:00–20:00 Uhr</span>' +
+        '<span class="hrs" style="color:rgba(255,255,255,.55)">Mo–Fr 9:00–18:00 Uhr</span>' +
       '</div>' +
       '<div class="soc">' +
         '<a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">' + ig + '</a>' +
@@ -69,9 +69,9 @@
           '<span class="ft-line">' + ADDR + '</span>' +
         '</div>' +
         '<div><h4>Öffnungszeiten</h4>' +
-          '<span class="ft-line">Montag – Samstag</span>' +
-          '<span class="ft-line">9:00 – 20:00 Uhr</span>' +
-          '<span class="ft-line" style="color:rgba(255,255,255,.5)">Sonntag geschlossen</span>' +
+          '<span class="ft-line">Montag – Freitag</span>' +
+          '<span class="ft-line">9:00 – 18:00 Uhr</span>' +
+          '<span class="ft-line" style="color:rgba(255,255,255,.5)">Samstag &amp; Sonntag geschlossen</span>' +
           '<a href="bewerbung.html" style="margin-top:8px">Karriere &amp; Bewerbung →</a>' +
         '</div>' +
       '</div>' +

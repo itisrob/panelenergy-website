@@ -403,3 +403,25 @@ footer .ft-line{font-size:.94rem;padding:5px 0;color:var(--w72)}
 .opt3 small{color:var(--muted);font-size:.8rem}
 @media(max-width:1020px){.pcards{grid-template-columns:1fr 1fr}.opt3grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.pcards{grid-template-columns:1fr}.opt3grid{grid-template-columns:1fr 1fr}.foerder .fin{padding:28px}}
+
+/* === v7: Partner-Logos (echte Bilder) + Google-Bewertungen === */
+.trust .logos .lg{background:#fff;border-radius:12px;padding:12px 18px;display:grid;place-items:center}
+.trust .logos .lg img{height:52px;width:auto;max-width:220px;object-fit:contain}
+.greview .gsum{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.greview .gsum .gscore{font-size:2.4rem;font-weight:700;color:#fff;line-height:1}
+.greview .gsum .gstars{color:#fbbc04;font-size:1.5rem;letter-spacing:3px}
+.greview .gsum small{color:var(--w72);font-size:.95rem}
+.greview .tcard{background:var(--dark-2);border:1px solid var(--w12)}
+.greview .tcard p{color:var(--w72)}
+.greview .tcard .who{color:#fff}
+.greview .tcard .stars{color:#fbbc04}
+.greview .gbadge{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:99px;padding:8px 16px;font-weight:700;color:#1e2024;font-size:.85rem}
+.pcards.four{grid-template-columns:repeat(4,1fr)}
+.pcard .pimg img.contain{object-fit:contain;padding:16px;background:#fff}
+a.pcard{color:inherit}
+@media(max-width:1020px){.pcards.four{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.pcards.four{grid-template-columns:1fr}}
+/* Fix: weisse Karten in dunklen Sektionen behalten dunkle Schrift */
+.sec-dark .pcard h3,.sec-darker .pcard h3{color:var(--ink)}
+.sec-dark .pcard p,.sec-darker .pcard p{color:var(--muted)}
+.sec-dark .quiz2 h3,.sec-dark .quiz2 .q{color:var(--ink)}
