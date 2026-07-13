@@ -5,9 +5,9 @@
   var LOGOW = 'https://panelenergy.de/wp-content/uploads/2024/02/logo-header-white.svg';
   var NAV = [
     ['index.html', 'Start', 'index'],
-    ['leistung-solaranlagenmontage.html', 'Solaranlagen', 'solaranlagen'],
     ['leistung-photovoltaik.html', 'Photovoltaik', 'photovoltaik'],
     ['leistung-waermepumpen.html', 'Wärmepumpen', 'waermepumpen'],
+    ['leistung-elektrikerservice.html', 'Elektrikerservice', 'elektrikerservice'],
     ['referenzen.html', 'Referenzen', 'referenzen'],
     ['bewerbung.html', 'Karriere', 'bewerbung'],
     ['kontakt.html', 'Kontakt', 'kontakt']
@@ -58,10 +58,9 @@
           '</div>' +
         '</div>' +
         '<div><h4>Leistungen</h4>' +
-          '<a href="leistung-solaranlagenmontage.html">Solaranlagenmontage</a>' +
-          '<a href="leistung-photovoltaik.html">Photovoltaik-Anlage</a>' +
-          '<a href="leistung-elektrikerservice.html">Elektrikerservice</a>' +
+          '<a href="leistung-photovoltaik.html">Photovoltaik &amp; Solar</a>' +
           '<a href="leistung-waermepumpen.html">Wärmepumpen</a>' +
+          '<a href="leistung-elektrikerservice.html">Elektrikerservice</a>' +
         '</div>' +
         '<div><h4>Kontakt</h4>' +
           '<a href="tel:' + TEL + '">' + TELD + '</a>' +
