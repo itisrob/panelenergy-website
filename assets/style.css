@@ -525,3 +525,6 @@ a.pcard{color:inherit}
 /* VX3-Groessen: natuerliche Proportionen (Groessenunterschied sichtbar) */
 .pimg.natural{aspect-ratio:auto !important;height:270px;background:#fff;align-items:end !important;display:flex !important;justify-content:center;padding-bottom:0}
 .pimg.natural img{height:auto;max-height:230px;width:auto;max-width:82%;object-fit:contain;padding:0 !important;margin-bottom:20px}
+/* Fix: Consent-Checkbox links neben dem Text (nicht darueber) */
+.field.consent{flex-direction:row;align-items:flex-start;gap:10px}
+.field.consent input{width:auto;margin-top:4px}
