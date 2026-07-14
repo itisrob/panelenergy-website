@@ -3,8 +3,9 @@
   var TEL = '+498921236860', TELD = '089 21236860', MAIL = 'Info@panelenergy.de';
   var ADDR = 'Tagetesstraße 6A, 80935 München';
   var LOGOW = 'https://panelenergy.de/wp-content/uploads/2024/02/logo-header-white.svg';
+  var LOGO = 'https://panelenergy.de/wp-content/uploads/2024/02/logo-header.svg';
   var NAV = [
-    ['index.html', 'Start', 'index'],
+    ['index.html#ueber-uns', 'Über uns', 'ueberuns'],
     ['leistung-photovoltaik.html', 'Photovoltaik', 'photovoltaik'],
     ['leistung-waermepumpen.html', 'Wärmepumpen', 'waermepumpen'],
     ['leistung-elektrikerservice.html', 'Elektrikerservice', 'elektrikerservice'],
@@ -37,7 +38,7 @@
       '</div>' +
     '</div></div>' +
     '<header id="site-hd"><div class="wrap nav">' +
-      '<a href="index.html" class="logo"><img src="' + LOGOW + '" alt="Panel Energy"></a>' +
+      '<a href="index.html" class="logo"><img src="' + LOGO + '" alt="Panel Energy"></a>' +
       '<nav class="menu" id="menu">' + menuHtml + '</nav>' +
       '<div class="nav-cta">' +
         '<a href="tel:' + TEL + '" class="phone">' + phoneSvg + TELD + '</a>' +
@@ -63,16 +64,15 @@
           '<a href="leistung-elektrikerservice.html">Elektrikerservice</a>' +
         '</div>' +
         '<div><h4>Kontakt</h4>' +
-          '<a href="tel:' + TEL + '">' + TELD + '</a>' +
-          '<a href="mailto:' + MAIL + '">' + MAIL + '</a>' +
-          '<span class="ft-line">Panelenergy GmbH</span>' +
-          '<span class="ft-line">' + ADDR + '</span>' +
+          '<div class="fo-row">' + pinSvg + '<span><b style="color:#fff">Panelenergy GmbH</b><br>' + ADDR + '</span></div>' +
+          '<div class="fo-row">' + phoneSvg + '<a href="tel:' + TEL + '" style="display:inline;padding:0">' + TELD + '</a></div>' +
+          '<div class="fo-row">' + mailSvg + '<a href="mailto:' + MAIL + '" style="display:inline;padding:0">' + MAIL + '</a></div>' +
         '</div>' +
         '<div><h4>Öffnungszeiten</h4>' +
-          '<span class="ft-line">Montag – Freitag</span>' +
-          '<span class="ft-line">9:00 – 18:00 Uhr</span>' +
-          '<span class="ft-line" style="color:rgba(255,255,255,.5)">Samstag &amp; Sonntag geschlossen</span>' +
-          '<a href="bewerbung.html" style="margin-top:8px">Karriere &amp; Bewerbung →</a>' +
+          '<div class="oh-row"><span>Montag – Freitag</span><b>9:00 – 18:00</b></div>' +
+          '<div class="oh-row closed"><span>Samstag</span><span>geschlossen</span></div>' +
+          '<div class="oh-row closed" style="border-bottom:0"><span>Sonntag</span><span>geschlossen</span></div>' +
+          '<a href="bewerbung.html" style="margin-top:10px">Karriere &amp; Bewerbung →</a>' +
         '</div>' +
       '</div>' +
       '<div class="foot-bottom">' +
@@ -111,8 +111,14 @@
 
   // mobile nav + header shadow
   var burger = document.getElementById('burger'), menu = document.getElementById('menu'), hdEl = document.getElementById('site-hd');
-  if (burger) burger.addEventListener('click', function () { menu.classList.toggle('open'); });
-  if (menu) menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.classList.remove('open'); }); });
+  if (burger) burger.addEventListener('click', function () { menu.classList.toggle('open'); burger.classList.toggle('open'); });
+  if (menu) menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.classList.remove('open'); if (burger) burger.classList.remove('open'); }); });
+
+  // Floating Call-Button (mobil)
+  var fab = document.createElement('a');
+  fab.className = 'call-fab'; fab.href = 'tel:' + TEL; fab.setAttribute('aria-label', 'Jetzt anrufen');
+  fab.innerHTML = phoneSvg.replace('width="17" height="17"', 'width="24" height="24"');
+  document.body.appendChild(fab);
   window.addEventListener('scroll', function () { if (hdEl) hdEl.classList.toggle('scrolled', window.scrollY > 10); });
 
   // reveal

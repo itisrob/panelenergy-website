@@ -425,3 +425,63 @@ a.pcard{color:inherit}
 .sec-dark .pcard h3,.sec-darker .pcard h3{color:var(--ink)}
 .sec-dark .pcard p,.sec-darker .pcard p{color:var(--muted)}
 .sec-dark .quiz2 h3,.sec-dark .quiz2 .q{color:var(--ink)}
+
+/* === v8: Logo-Pill (Original-Logo), Burger-Animation, Marquee, Partner, Ueber uns, Footer, Mobile === */
+.logo{background:#fff;border-radius:10px;padding:7px 12px;width:auto;display:inline-flex;align-items:center}
+.logo img{height:34px;width:143px;max-width:none;object-fit:contain;object-position:left center}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* Logo-Durchlaeufer */
+.marquee{background:var(--dark-2);border-bottom:1px solid var(--w12);overflow:hidden;padding:22px 0}
+.mq-track{display:flex;align-items:center;gap:70px;width:max-content;animation:mq 26s linear infinite}
+.marquee:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mq-track .mi{display:flex;align-items:center;gap:12px;flex:none}
+.mq-track .mi b{font-size:1.25rem;color:#fff;opacity:.8;letter-spacing:.08em;white-space:nowrap}
+.mq-track .mi img{height:44px;width:auto;background:#fff;border-radius:8px;padding:7px 12px}
+
+/* Partner-/Zertifikat-Sektion (ThermoSol-Stil) */
+.partnersec{background:#fff}
+.partnersec .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.partnersec .badge-img{height:110px;width:auto;margin-bottom:26px}
+.cert-frame{border:1.5px dashed #cdd5de;border-radius:18px;aspect-ratio:4/3;display:grid;place-items:center;text-align:center;color:var(--muted);padding:30px;background:var(--soft)}
+.cert-frame svg{margin:0 auto 12px;color:var(--orange)}
+
+/* Ueber uns + Video-Platzhalter */
+.about{background:var(--dark-1)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.video-ph{position:relative;aspect-ratio:16/9;border-radius:18px;background:var(--dark-3);border:1.5px dashed rgba(255,255,255,.25);display:grid;place-items:center;text-align:center;color:var(--w72);padding:20px}
+.video-ph .play{width:74px;height:74px;border-radius:50%;background:var(--orange);display:grid;place-items:center;margin:0 auto 14px;box-shadow:0 12px 30px rgba(240,103,12,.4)}
+.about .fact{display:flex;gap:12px;align-items:flex-start;margin-top:14px}
+.about .fact svg{color:var(--orange);flex:none;margin-top:4px}
+.about .fact b{color:#fff}
+.about .fact span{color:var(--w72);font-size:.95rem}
+
+/* Footer aufgeraeumt */
+.fo-row{display:flex;gap:12px;align-items:flex-start;padding:7px 0;color:var(--w72);font-size:.94rem}
+.fo-row svg{color:var(--orange);flex:none;margin-top:3px}
+.oh-row{display:flex;justify-content:space-between;gap:14px;padding:8px 0;border-bottom:1px dashed var(--w12);font-size:.94rem;color:var(--w72)}
+.oh-row b{color:#fff;font-weight:700}
+.oh-row.closed span{color:var(--w55)}
+
+/* Floating Call-Button (mobil) */
+.call-fab{position:fixed;right:16px;bottom:16px;z-index:150;width:58px;height:58px;border-radius:50%;background:var(--orange);display:none;place-items:center;box-shadow:0 14px 34px rgba(240,103,12,.5);color:#fff}
+.call-fab:active{transform:scale(.95)}
+
+@media(max-width:760px){
+  .call-fab{display:grid}
+  .draft-note{bottom:84px}
+  .topbar .soc{display:none}
+  .topbar .ti .addr{display:inline-flex !important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:52vw}
+  .topbar .ti{flex-wrap:nowrap;gap:12px;font-size:.78rem;overflow:hidden}
+  .topbar .wrap{gap:0}
+  .partnersec .wrap,.about .wrap{grid-template-columns:1fr;gap:34px}
+  .mq-track{gap:44px}
+}
+@media(min-width:761px) and (max-width:1020px){.partnersec .wrap,.about .wrap{grid-template-columns:1fr;gap:40px}}
+/* Produkt-Renders: quadratische Bildflaeche, ganzes Geraet sichtbar */
+.pcard .pimg:has(img.contain){aspect-ratio:1/1}
+.pcard .pimg img.contain{padding:22px}
+.menu a{white-space:nowrap}
