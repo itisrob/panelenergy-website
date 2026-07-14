@@ -533,3 +533,28 @@ a.pcard{color:inherit}
 .map-facade.loaded iframe{position:static;flex:1;width:100%;min-height:0}
 .map-addr{background:#fff;border-top:1px solid var(--line);padding:11px 14px;font-size:.88rem;color:var(--ink-2);display:flex;align-items:center;gap:8px;flex:none}
 .map-addr b{color:var(--ink)}
+
+/* === v11: Dynamischer Logo-Durchlaeufer im Partner-Strip === */
+.pstrip .mqwrap{overflow:hidden;flex:1;padding:26px 0;min-width:0}
+.pstrip .mq-track{display:flex;align-items:center;gap:34px;width:max-content;animation:mq 30s linear infinite}
+.pstrip .mqwrap:hover .mq-track{animation-play-state:paused}
+.lgp{flex:none;display:flex;align-items:center;background:#fff;border-radius:12px;padding:10px 20px;height:62px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.lgp img{height:42px;width:auto;max-width:190px;object-fit:contain}
+.lgp b{font-size:1.25rem;letter-spacing:.06em;color:var(--ink);white-space:nowrap}
+.lgp b.vred{color:#ff3e17;letter-spacing:.1em}
+.lgp small{display:block;font-size:.6rem;color:var(--muted);letter-spacing:.16em;text-transform:uppercase;font-weight:400}
+
+/* Zukunftspartner-Auszeichnung (Kachel nachgebaut, ohne fremde Urkunde) */
+.award{position:relative;aspect-ratio:1/1;max-width:430px;margin:0 auto;background:linear-gradient(135deg,#050505,#232323 55%,#0c0c0c);border-radius:6px;box-shadow:var(--shadow);display:flex;align-items:flex-end;padding:28px;overflow:hidden}
+.award .vmark{position:absolute;inset:-4% 0 0 0;display:grid;place-items:center;font-size:17rem;font-weight:700;line-height:1;color:transparent;background:linear-gradient(115deg,#3d3d3d 20%,#7a7a7a 50%,#1c1c1c 80%);-webkit-background-clip:text;background-clip:text;user-select:none}
+.award .alabel{position:relative;color:#fff;font-size:1.15rem;letter-spacing:.02em}
+.award .vtop{position:absolute;top:18px;right:20px;color:#ff3e17;font-weight:700;letter-spacing:.12em;font-size:.82rem}
+.award-cap{margin-top:14px;text-align:center;font-size:.92rem;color:var(--muted)}
+.award-cap b{color:var(--ink)}
+
+/* Referenzen-Galerie: Bilder vollstaendig (Masonry statt Beschnitt) */
+.gallery{display:block;columns:3;column-gap:18px}
+.gitem{aspect-ratio:auto;margin-bottom:18px;break-inside:avoid;display:block}
+.gitem img{width:100%;height:auto}
+@media(max-width:1020px){.gallery{columns:2}}
+@media(max-width:640px){.gallery{columns:1}}
