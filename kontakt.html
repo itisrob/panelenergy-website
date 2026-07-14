@@ -39,7 +39,9 @@
     </div>
     <script>
     document.getElementById('map').addEventListener('click', function(){
-      this.innerHTML='<iframe src="https://www.google.com/maps?q=Tagetesstra%C3%9Fe%206A%2C%2080935%20M%C3%BCnchen&output=embed&hl=de" title="Karte: Panelenergy GmbH" loading="lazy" allowfullscreen></iframe>';
+      this.classList.add('loaded');
+      this.innerHTML='<iframe src="https://www.google.com/maps?q=Panelenergy%20GmbH%2C%20Tagetesstra%C3%9Fe%206A%2C%2080935%20M%C3%BCnchen&output=embed&hl=de" title="Karte: Panelenergy GmbH, Tagetesstraße 6A" loading="lazy" allowfullscreen></iframe>'+
+        '<div class="map-addr"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F0670C" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><b>Panelenergy GmbH</b>&nbsp;· Tagetesstraße 6A, 80935 München</div>';
     });
     </script>
   </div>

@@ -528,3 +528,8 @@ a.pcard{color:inherit}
 /* Fix: Consent-Checkbox links neben dem Text (nicht darueber) */
 .field.consent{flex-direction:row;align-items:flex-start;gap:10px}
 .field.consent input{width:auto;margin-top:4px}
+/* Karte: volle Adresse als feste Zeile unter der Karte */
+.map-facade.loaded{display:flex;flex-direction:column;cursor:default;place-items:initial}
+.map-facade.loaded iframe{position:static;flex:1;width:100%;min-height:0}
+.map-addr{background:#fff;border-top:1px solid var(--line);padding:11px 14px;font-size:.88rem;color:var(--ink-2);display:flex;align-items:center;gap:8px;flex:none}
+.map-addr b{color:var(--ink)}
