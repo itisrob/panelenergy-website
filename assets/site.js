@@ -38,7 +38,7 @@
       '</div>' +
     '</div></div>' +
     '<header id="site-hd"><div class="wrap nav">' +
-      '<a href="index.html" class="logo"><img src="' + LOGO + '" alt="Panel Energy"></a>' +
+      '<a href="index.html" class="logo"><img src="' + LOGOW + '" alt="Panel Energy"></a>' +
       '<nav class="menu" id="menu">' + menuHtml + '</nav>' +
       '<div class="nav-cta">' +
         '<a href="tel:' + TEL + '" class="phone">' + phoneSvg + TELD + '</a>' +

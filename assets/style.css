@@ -485,3 +485,43 @@ a.pcard{color:inherit}
 .pcard .pimg:has(img.contain){aspect-ratio:1/1}
 .pcard .pimg img.contain{padding:22px}
 .menu a{white-space:nowrap}
+
+/* === v9: ECHTER Sticky-Header (Wrapper klebt, Topbar rutscht raus) === */
+#hdr{position:sticky;top:-42px;z-index:95}
+@media(max-width:760px){#hdr{top:-38px}}
+
+/* Logo zurueck wie vorher (weiss, ohne Kachel) */
+.logo{background:transparent;border-radius:0;padding:0;width:178px;display:block}
+.logo img{height:42px;width:178px}
+
+/* Hero dynamisch: Ken-Burns + Einflug */
+.hero3 .bg img{animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1) translate(0,0)}to{transform:scale(1.12) translate(-1.6%,-1.2%)}}
+.hero3 .inner>*{opacity:0;animation:heroIn .9s cubic-bezier(.2,.7,.3,1) forwards}
+.hero3 .inner>*:nth-child(1){animation-delay:.1s}
+.hero3 .inner>*:nth-child(2){animation-delay:.25s}
+.hero3 .inner>*:nth-child(3){animation-delay:.4s}
+.hero3 .inner>*:nth-child(4){animation-delay:.55s}
+.hero3 .inner>*:nth-child(5){animation-delay:.7s}
+@keyframes heroIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+
+/* Premium-Partner-Strip (Energiewerke-Stil) */
+.pstrip{background:var(--dark-2);border-bottom:1px solid var(--w12);position:relative}
+.pstrip .wrap{display:flex;align-items:center;gap:40px;padding-top:0;padding-bottom:0;min-height:110px;flex-wrap:wrap}
+.pstrip .brands{display:flex;align-items:center;gap:48px;flex-wrap:wrap;flex:1;padding:24px 0}
+.pstrip .brands .bw{font-weight:700;letter-spacing:.06em;white-space:nowrap;font-size:1.7rem;color:#fff;opacity:.92}
+.pstrip .brands .bw.viessmann{color:#ff3e17;font-size:1.9rem;letter-spacing:.1em}
+.pstrip .brands .bw small{display:block;font-size:.62rem;color:var(--w55);letter-spacing:.18em;font-weight:400;text-transform:uppercase}
+.pstrip .pcardo{background:linear-gradient(135deg,var(--orange),#c94e07);border-radius:0 0 18px 18px;padding:26px 30px;color:#fff;max-width:300px;font-weight:700;line-height:1.5;align-self:stretch;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.pstrip .pcardo svg{width:30px;height:30px}
+@media(max-width:1020px){.pstrip .pcardo{border-radius:14px;margin:0 0 22px;max-width:none;width:100%}.pstrip .brands{justify-content:center}}
+
+/* Karten-Facade (Kontakt) */
+.map-facade{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/9;cursor:pointer;background:linear-gradient(135deg,#e8eef5,#f4f7fb);display:grid;place-items:center;text-align:center;color:var(--muted)}
+.map-facade:hover{border-color:var(--orange)}
+.map-facade .pin{width:60px;height:60px;border-radius:50%;background:var(--orange);display:grid;place-items:center;margin:0 auto 12px;box-shadow:0 12px 28px rgba(240,103,12,.4);color:#fff}
+.map-facade iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* VX3-Groessen: natuerliche Proportionen (Groessenunterschied sichtbar) */
+.pimg.natural{aspect-ratio:auto !important;height:270px;background:#fff;align-items:end !important;display:flex !important;justify-content:center;padding-bottom:0}
+.pimg.natural img{height:auto;max-height:230px;width:auto;max-width:82%;object-fit:contain;padding:0 !important;margin-bottom:20px}

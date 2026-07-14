@@ -30,9 +30,18 @@
       <div class="ci"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></div><div><b>Info@panelenergy.de</b><span>Antwort innerhalb von 24 Stunden</span></div></div>
       <div class="ci"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><b>Panel Energy GmbH</b><span>München &amp; Umgebung</span></div></div>
     </div>
-    <div style="margin-top:26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--soft);aspect-ratio:16/9;display:grid;place-items:center;color:var(--muted);text-align:center;font-size:.9rem">
-      <div><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin:0 auto 8px;color:var(--orange)"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Kartenansicht München<br><span style="font-size:.8rem">(Google Maps folgt im WordPress)</span></div>
+    <div class="map-facade" id="map" role="button" aria-label="Karte laden" style="margin-top:26px">
+      <div>
+        <span class="pin"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <b style="color:var(--ink)">Karte anzeigen</b><br>
+        <span style="font-size:.82rem">Klicken zum Laden — dabei werden Daten an Google Maps übertragen (siehe <a href="datenschutz.html" style="color:var(--orange);text-decoration:underline">Datenschutz</a>).</span>
+      </div>
     </div>
+    <script>
+    document.getElementById('map').addEventListener('click', function(){
+      this.innerHTML='<iframe src="https://www.google.com/maps?q=Tagetesstra%C3%9Fe%206A%2C%2080935%20M%C3%BCnchen&output=embed&hl=de" title="Karte: Panelenergy GmbH" loading="lazy" allowfullscreen></iframe>';
+    });
+    </script>
   </div>
   <div class="form-card reveal d1" id="form">
     <h3 style="margin-bottom:16px">Kostenlose Beratung anfragen</h3>
